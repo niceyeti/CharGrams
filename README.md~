@@ -1,0 +1,20 @@
+This repo contains some of my own experiments trying to optimize
+n-gram models for english character frequencies. The problem is mentioned
+in many NLP books, whereby a bunch of n-gram models (1-, 2-, 3-gram, etc)
+are constructed or given. The task is to form a weighted sum of the maximum likelihood estimates
+given by each model for some preceding set of grams. My interest here was in optimizing the
+model weights: lambda_1, lambda_2, etc. For a specific description see Jurafsky's NLP book's
+references to n-gram model weighted averages and their maximization.
+
+No NLP books mention formal methods for performing this optimization task, they just say "use a
+maximization procedure such as BW or EM to maximize..." which is not correct. This code-base
+was just a playground for figuring out how to do so. In fact, most methods rely on numerical
+optimization methods that don't have much to do with likelihood estimation/maximization, but may
+rely on things like a golden-mean or fibonacci search over possible lambda values and other such
+non-statistical or informal methods.
+
+
+Basic character frequency analysis provides a basis for cryptanalytic and side-channel methods, so
+hopefully this repo can be develop a bit more into a generic n-gram api for such basic markovian analyses.
+Such analyses can be freakishly effective for ciphers with poorly chosen padding and obfuscation schemes.
+
