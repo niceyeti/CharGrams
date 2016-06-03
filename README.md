@@ -19,3 +19,7 @@ hopefully this repo can be develop a bit more into a generic n-gram api for such
 Such analyses can be freakishly effective for ciphers with poorly chosen padding and obfuscation schemes,
 and poor foresight about chosen-plaintexts.
 
+TODO:
+-gzip the n-gram files into archives to reduce their size, and just use py modules to decompress
+before reading the files
+-Merge n-gram learning models into this repo
